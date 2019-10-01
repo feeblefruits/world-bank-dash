@@ -4,6 +4,8 @@ Data vis dashboard built using Flask, Bootstrap and Plotly. This project is part
 
 Following the instructions below will launch data vis dashboard showing charts using world bank data.
 
+View the dashboard [here](https://world-bank-dash.herokuapp.com/).
+
 ## Requirements
 
 In terminal do to directory and use the package manager [pip](https://pip.pypa.io/en/stable/) to install requirements.
