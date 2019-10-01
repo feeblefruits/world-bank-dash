@@ -18,17 +18,12 @@ pip install -r requirements.txt
 ## Usage
 Run local server
 
-Add the line ```bash app.run(host='0.0.0.0', port=3001, debug=True)``` to worldbank.py to test. Run worldbank.py in your shell.
+Add the line ```app.run(host='0.0.0.0', port=3001, debug=True)``` to worldbank.py to test. Run worldbank.py in your shell.
 
 ```bash
 python worldbank.py
 ```
 In your browser go to http://localhost:3001 to view site.
-
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
 
 ## Heroku setup as provided by Udacity
 
@@ -44,51 +39,77 @@ Make sure that the web app is working locally.
 - pip install the libraries needed for the web app. In this case those are flask, pandas, plotly, and gunicorn.
 
 - next install the heroku command line tools with the following command:
+
+```bash
 curl https://cli-assets.heroku.com/install-ubuntu.sh | sh
 https://devcenter.heroku.com/articles/heroku-cli#standalone-installation
+```
 
 - then check the installation with the command:
+
+```bash
 heroku —-version
+```
 
 - next, log into heroku using the command:
+```bash
 heroku login
+```
 and then enter your email and password when asked
 
-- remove app.run() from the worldbank.py file
+- remove ```app.run()``` from the worldbank.py file
 
-- go into the 5_deployment folder with:
-cd 5_deployment
-
-- create a procfile with the command
+- cd to root directory and create a procfile with the command
+```
 touch Procfile
+```
 and put the following in the Procfile
+```
 web gunicorn worldbank:app
+```
 
 - Then create a requirements file with this command:
 pip freeze > requirements.txt
 
 - Next, initialize a git repository with the following commands:
+```
 git init
 git add .
+```
 
 - configure the email and user name, you can use these commands:
+```
 git config --global user.email email@example.com
 git config --global user.name "my name"
+```
 
 - make a commit with this command:
+```
 git commit -m "first commit"
+```
 
 - create a uniquely named heroku app. Use this command:
+```
 heroku create my-app-name
+```
 If you get a message that the app name is already taken, try again with a different app name until you find one that is not taken
 
 - check that heroku added a remote repository with this command:
+```
 git remote -v
+```
 
 - push the app to Heroku:
+```
 git push heroku master
+```
 
 Go to the link for your web app to see if it's working. The link should be https://app-name.heroku.com
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
